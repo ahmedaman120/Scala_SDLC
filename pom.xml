@@ -17,6 +17,7 @@
         <!--scala mvn plugin-->
         <scala-mvn-version>4.5.3</scala-mvn-version>
         <scala-test-version>3.1.1</scala-test-version>
+        <scala-test-mvn-plugin>2.0.0</scala-test-mvn-plugin>
     </properties>
 
     <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
@@ -45,10 +46,26 @@
                     <execution>
                         <goals>
                             <goal>compile</goal>
+                            <goal>testCompile</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.scalatest</groupId>
+                <artifactId>scalatest-maven-plugin</artifactId>
+                <version>${scala-test-mvn-plugin}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+            </plugin>
+
         </plugins>
     </build>
 
