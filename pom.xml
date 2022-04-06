@@ -11,6 +11,38 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <scala-library-version>2.11</scala-library-version>
+        <scala-library-subversion>12</scala-library-subversion>
+
+        <!--scala mvn plugin-->
+        <scala-mvn-version>4.5.3</scala-mvn-version>
     </properties>
+
+    <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala-library-version}.${scala-library-subversion}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                    <groupId>net.alchim31.maven</groupId>
+                    <artifactId>scala-maven-plugin</artifactId>
+                    <version>${scala-mvn-version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
 
 </project>
