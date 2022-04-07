@@ -51,6 +51,17 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <args>P:scapegoat:dataDir:./target/site/scapegoat</args>
+                    <compilerPlugins>
+                        <compilerPlugin>
+                            <groupId>com.sksamuel.scapegoat</groupId>
+                            <artifactId>scalac-scapegoat-plugin_2.11.12</artifactId>
+                            <version>1.4.12</version>
+                            <scope>provided</scope>
+                        </compilerPlugin>
+                    </compilerPlugins>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.scalatest</groupId>
@@ -105,6 +116,7 @@
                     <additionalForkedProjectProperties>skipTests=false</additionalForkedProjectProperties>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 

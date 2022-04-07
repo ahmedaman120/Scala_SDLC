@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="Maven 1" modules="Scala-SDLC" />
+    <profile name="Maven 1" modules="Scala-SDLC">
+      <plugins>
+        <plugin path="C:\Users\Memen\.m2\repository\com\sksamuel\scapegoat\scalac-scapegoat-plugin_2.11.12\1.4.12\scalac-scapegoat-plugin_2.11.12-1.4.12.jar" />
+      </plugins>
+    </profile>
   </component>
 </project>
