@@ -52,13 +52,12 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <args>P:scapegoat:dataDir:./target/site/scapegoat</args>
+                    <args>-P:scapegoat:dataDir:./target/site/scapegoat</args>
                     <compilerPlugins>
                         <compilerPlugin>
                             <groupId>com.sksamuel.scapegoat</groupId>
                             <artifactId>scalac-scapegoat-plugin_2.11.12</artifactId>
-                            <version>1.4.12</version>
-                            <scope>provided</scope>
+                            <version>1.4.4</version>
                         </compilerPlugin>
                     </compilerPlugins>
                 </configuration>
@@ -91,11 +90,6 @@
                 <configuration>
                     <skipTests>true</skipTests>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.scoverage</groupId>
-                <artifactId>scoverage-maven-plugin</artifactId>
-                <version>1.4.11</version>
             </plugin>
             <plugin>
                 <groupId>org.scoverage</groupId>
