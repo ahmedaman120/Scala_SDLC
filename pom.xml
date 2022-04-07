@@ -18,6 +18,7 @@
         <scala-mvn-version>4.5.3</scala-mvn-version>
         <scala-test-version>3.1.1</scala-test-version>
         <scala-test-mvn-plugin>2.0.0</scala-test-mvn-plugin>
+        <skipTests>true</skipTests>
     </properties>
 
     <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
@@ -78,6 +79,30 @@
                     <version>3.0.0-M5</version>
                 <configuration>
                     <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.scoverage</groupId>
+                <artifactId>scoverage-maven-plugin</artifactId>
+                <version>1.4.11</version>
+            </plugin>
+            <plugin>
+                <groupId>org.scoverage</groupId>
+                <artifactId>scoverage-maven-plugin</artifactId>
+                <version>1.4.11</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <phase>verify</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <minimumCoverage>80</minimumCoverage>
+                    <failOnMinimumCoverage>true</failOnMinimumCoverage>
+                    <highlighting>true</highlighting>
+                    <additionalForkedProjectProperties>skipTests=false</additionalForkedProjectProperties>
                 </configuration>
             </plugin>
         </plugins>
